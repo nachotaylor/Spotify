@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spotify</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="css/estilos.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+
+	<script>
+	$(document).ready(function()
+	{
+		$("#add").click(function()
+			{
+				if ($(".btn-expand").text()=='+')
+				{
+					$(".btn-expand").text('X');
+					$("#add span").hide();
+				}
+				else
+				{
+					$(".btn-expand").text('+');
+					$("#add span").show();
+				}
+			}
+		);
+	});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="col-md-10 search-bar center-block">
+				<i class="icon-search"></i>
+				<input type="search" class="form-control input-sm"  placeholder="Search" />
+			</div>
+		</nav>	<!-- navbar -->
+	</div>
+	<div class="container" id="margen">
+    	<div class="row">
+			<div class="col-md-12 background center-block">
+				<div class="efecto" style="background-image: url(img/cover.jpg);"></div>
+	    		<div class="col-md-2 hidden-xs" id="img-cover">
+					<img class="img-responsive" src="img/cover.jpg">
+	            </div>
+				<div class="col-md-6" id="info">
+					<small>LA VELA PUERCA</small>
+					<h1>Piel y Hueso</h1>
+	                <div id="listen">
+						<span class="btn btn-circle"><i class="glyphicon glyphicon-volume-up"></i></span>
+						<span id="listen-text"><a href="#">Listen on Spotify</a></span>
+					</div>
+				</div>
+				<div class="col-md-4" id="view">
+					<button type="button" class="btn-sm btn-back" onclick="location.href='index.html'"><i class="glyphicon glyphicon-menu-left"></i>BACK TO SEARCH</button>
+				</div>
+			</div>
+    	</div>
+		<div class="row"> 
+			<div class="col-md-12">
+				<div class="col-md-4" id="comment">
+					<h4><small>COMMENTS</small></h4>
+				</div>
+				<div class="col-md-6" id="add">
+					<div class="row">
+						<div class="col-md-4" id="add-comment">
+							<a role="button" data-toggle="collapse" href="#new-comment" aria-expanded="false" aria-controls="collapseExample"><span class="hidden-xs">Add comment</span>	
+							<button class="btn-expand">+</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12 box" id="content">
+				<div class="row well collapse" id="new-comment">
+					<div class="hidden-xs">
+						<div class="col-md-2" id="image-comment">
+							<img src="img/404040.png" class="image-comment">
+						</div>
+						<div class="col-md-8" id="cuadro-comment">
+							<input type="email" class="form-control input-sm" name="" id="mail" placeholder="e-mail">
+							<textarea class="form-control input-sm" id="write" rows="3" placeholder="Write your comment"></textarea>
+						</div>
+							<button class="btn-add">ADD</button>
+					</div>
+					<div class="visible-xs">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-2 pull-left" id="img">
+									<img src="img/404040.png" class="img-circle">
+								</div>
+								<div class="col-md-10 pull-right" id="email">
+									<input type="email" class="form-control input-sm" name="" id="mail" placeholder="e-mail">
+								</div>
+							</div>
+						</div>
+						<div id="comment-message">
+							<textarea class="form-control input-sm" id="write" rows="3" placeholder="Write your comment"></textarea>
+						</div>
+						<button class="btn-add center-block">ADD</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12" id="content">
+				<div class="row well center-block">
+					<div class="col-md-2" id="image">
+						<img src="img/roberto-carlos.jpg" class="img-rounded">
+					</div>
+					<div class="col-md-8" id="cuadro">
+						<p><small>RobertoCarlos@gmail.com</small>
+						<br>
+						"Suenan muy bien. Son mis amigos. Como el millon de amigos que tengo en el universo. Pero ninguno suena tan bien como La vela puerca en este cd. Bueno mentira: Hay gente que suena mejor."</p>
+					</div>
+				</div>
+				<div class="row well center-block">
+					<div class="col-md-2" id="image">
+						<img src="img/roberto-carlos.jpg" class="img-rounded">
+					</div>
+					<div class="col-md-8" id="cuadro">
+						<p><small>user@email.com</small>
+						<br>
+						"Paragraph with the user's comment."</p>
+					</div>
+				</div>
+				<div class="row well center-block">
+					<div class="col-md-2" id="image">
+						<img src="img/roberto-carlos.jpg" class="img-rounded">
+					</div>
+					<div class="col-md-8" id="cuadro">
+						<p><small>user@email.com</small>
+						<br>
+						"Paragraph with the user's comment."</p>
+					</div>
+				</div>
+				<div class="row well center-block">
+					<div class="col-md-2" id="image">
+						<img src="img/roberto-carlos.jpg" class="img-rounded">
+					</div>
+					<div class="col-md-8" id="cuadro">
+						<p><small>user@email.com</small>
+						<br>
+						"Paragraph with the user's comment."</p>
+					</div>
+				</div>
+				<div class="row well center-block">
+					<div class="col-md-2" id="image">
+						<img src="img/roberto-carlos.jpg" class="img-rounded">
+					</div>
+					<div class="col-md-8" id="cuadro">
+						<p><small>user@email.com</small>
+						<br>
+						"Paragraph with the user's comment."</p>
+					</div>
+				</div>
+				<div class="col-md-2" id="show">
+					<button type="button" class="btn-show center-block">SHOW MORE COMMENTS</button>
+				</div>
+			</div>
+		</div>
+    </div>
+</body>
+</html>
